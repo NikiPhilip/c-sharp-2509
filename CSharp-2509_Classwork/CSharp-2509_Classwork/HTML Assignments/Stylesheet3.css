@@ -1,0 +1,104 @@
+﻿/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styling */
+.product-header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Section Styling */
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color:cornsilk;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image Styling */
+.product-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Description Styling */
+.product-description {
+    margin-left: 40px;
+    text-align: left;
+}
+
+    .product-description h2 {
+        font-size: 28px;
+        color: #2c3e50;
+    }
+
+    .product-description p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+/* Features Section Styling */
+.features-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .features-section h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    .features-section ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        font-size: 18px;
+        color: #555;
+    }
+
+        .features-section ul li {
+            margin-bottom: 10px;
+        }
+
+/* Call to Action Button Styling */
+.cta-section {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .cta-button:hover {
+        background-color: #c0392b;
+    }

@@ -1,0 +1,31 @@
+
+<!-- Write a JavaScript program that takes two numbers as input from the user and 
+displays their sum. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum</title>
+</head>
+<body>
+    <h2>Enter two numbers for sum</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number"><br><br>
+
+    <button onclick="calculatesum()">Calculate Sum</button>
+
+    <p id="result"></p>
+    <script>
+        function calculatesum(){
+
+            let number1=parseFloat(document.getElementById('num1').value);
+            let number2=parseFloat(document.getElementById('num2').value)
+            let sum=number1+number2;
+
+            document.getElementById('result').innerHTML="The sum is " +sum;
+        }
+    </script>
+  
+</body>
+</html>

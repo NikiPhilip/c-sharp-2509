@@ -1,0 +1,50 @@
+﻿body
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.blog_header {
+    color: cadetblue;
+    padding:10px;
+    text-align:center;
+    background-color: antiquewhite;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog_content {
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color:ghostwhite;
+    gap:30px;
+}
+.blog_content p{
+    font-size:20px;
+}
+.blog_content img{
+    height:150px;
+    width:400px;
+}
+.comment_box .box {
+    background-color: #fff8dc;
+    border-left: 4px solid #ff6347;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .comment_box .box h3 {
+        margin: 0 0 5px;
+        font-size: 20px;
+        color: #ff6347;
+    }
+
+    .comment_box .box p {
+        margin: 0;
+        font-size: 15px;
+        color: #333;
+    }

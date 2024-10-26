@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #prev {
+            left: 0;
+        }
+
+        #next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Image Carousel</h1>
+
+    <div class="carousel">
+        <button id="prev">Previous</button>
+        <img id="carousel-image" src="images/nature1.jpeg" alt="Image 1">
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        // Array of image URLs
+        const images = [
+            "images/nature1.jpeg",
+            "images/nature2.jpeg",
+            "images/nature3.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        const carouselImage = document.getElementById("carousel-image");
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+
+        // Function to update the image
+        function updateImage() {
+            carouselImage.src = images[currentImageIndex];
+        }
+
+        // Event listeners for Next and Previous buttons
+        nextButton.addEventListener("click", function() {
+            currentImageIndex = (currentImageIndex + 1) % images.length; // Loop back to start
+            updateImage();
+        });
+
+        prevButton.addEventListener("click", function() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length; // Loop back to end
+            updateImage();
+        });
+    </script>
+
+</body>
+</html>

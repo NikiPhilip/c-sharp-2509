@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+</head>
+<body>
+    
+    <h2>Simple Quiz</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1.What is the capital of France?</p>
+            <input type="radio" id="q1a1" name="q1" value="a"><label for="q1a1">Berlin</label><br>
+            <input type="radio" id="q1a2" name="q1" value="b"><label for="q1a2">Madrid</label><br>
+            <input type="radio" id="q1a3" name="q1" value="c"><label for="q1a3">Paris</label><br>
+        </div>
+
+        <div class="question">
+            <p>2.Which planet is known as red planet?</p>
+            <input type="radio" id="q2a1" name="q2" value="a"><label for="q2a1">Venus</label><br>
+            <input type="radio" id="q2a2" name="q2" value="b"><label for="q2a2">Mars</label><br>
+            <input type="radio" id="q2a3" name="q2" value="c"><label for="q2a3">Jupiter</label><br>
+        </div>
+
+        <div class="question">
+            <p>3. What is the largest ocean on Earth?</p>
+            <input type="radio" id="q3a1" name="q3" value="a"><label for="q3a1">Atlantic Ocean</label><br>
+            <input type="radio" id="q3a2" name="q3" value="b"><label for="q3a2">Indian Ocean</label><br>
+            <input type="radio" id="q3a3" name="q3" value="c"><label for="q3a3">Pacific Ocean</label><br><br>
+
+        </div>
+
+        <input class="submit" type="submit" value="Submit Quiz">
+    </form>
+
+    <div id="score"></div>
+
+    <script>
+        const correctAnswers={
+            q1:'c',
+            q2:'b',
+            q3:'c'
+        };
+
+        document.getElementById('quizForm').addEventListener('submit',function(event)
+        {
+            event.preventDefault();
+
+            let score=0;
+            const TotalQuestions = Object.keys(correctAnswers).length;
+            let resultText= '';
+
+            for (let question in correctAnswers)
+            {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+            
+                if (userAnswer)
+                {
+
+                    if(userAnswer.value=== correctAnswers[question])
+                    {
+                        score++;
+                        resultText += `<p class= "correct">Question ${question.slice(1)}:Correct!</p>`;
+                    }
+                    else
+                    {
+                            resultText +=`<p class="wrong"> Question ${question.slice(1)}:Wrong! Correct Answer is ${correctAnswers[question]}</p>`;
+                    }
+                }
+                    else
+                    {
+                        resultText += `<p class="wrong">Question ${question.slice(1)}:No answer selected, Correct answer is ${correctAnswers[question]}</p>`;
+
+                    }
+                
+            }
+
+            
+            document.getElementById('score').innerHTML = 
+            `<p> Your Score: ${score} out of ${TotalQuestions}</p>
+            ${resultText}`;
+        
+        });
+
+    </script>
+
+    <style>
+        h2{
+            text-align: center;
+            color: brown;
+        }
+        .question{
+            padding:10px;
+            width:500px;
+            border:1px solid #ccc;
+            margin: auto;
+        }
+        .correct{
+            color:green;
+        }
+
+        .wrong{
+            color:red;
+        }
+        .submit{
+            
+        }
+
+    </style>
+
+
+</body>
+</html>

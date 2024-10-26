@@ -1,0 +1,54 @@
+﻿/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between links */
+}
+
+    .nav-links li {
+        display: inline-block;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+        transition: color 0.3s;
+    }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Adjust space between links */
+    }
+
+        .nav-links a {
+            padding: 10px 0; /* Add more vertical padding */
+            font-size: 20px; /* Increase font size for mobile */
+        }
+}

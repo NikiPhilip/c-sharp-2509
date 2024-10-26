@@ -1,0 +1,97 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.pricing_table {
+    text-align: center;
+    width: 80%;
+}
+
+    .pricing_table h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+.plans_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.plan {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .plan:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .plan h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .plan .price {
+        font-size: 28px;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    .plan ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 20px;
+    }
+
+        .plan ul li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+    .plan button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+        .plan button:hover {
+            background-color: #45a049;
+        }
+
+    .plan.basic {
+        background-color: #f9f9f9;
+    }
+
+    .plan.standard {
+        background-color: #e8f5e9;
+    }
+
+    .plan.premium {
+        background-color: #ffe0b2;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plans_container {
+        grid-template-columns: 1fr;
+    }
+}

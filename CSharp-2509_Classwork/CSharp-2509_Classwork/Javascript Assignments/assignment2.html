@@ -1,0 +1,36 @@
+
+<!-- Create a JavaScript program that takes a number as input from the user and determines 
+whether the number is even or odd. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OddEven</title>
+</head>
+<body>
+    <h2>Check odd or even number</h2>
+    <input type="number" id="num" placeholder="Enter the number">
+
+    <button onclick="Checkoddeven()" >Check OddEven</button>
+    <p id="result"></p>
+    <script>
+        function Checkoddeven(){
+            let number=parseFloat(document.getElementById('num').value);
+            if(number%2==0)
+            {
+                result="even"
+            }
+            else{
+                result="odd"
+            }
+            document.getElementById('result').innerHTML="The number is "+result
+        }
+    </script>
+    <style>
+        button{
+            background-color:green ;
+        }
+    </style>
+</body>
+</html>

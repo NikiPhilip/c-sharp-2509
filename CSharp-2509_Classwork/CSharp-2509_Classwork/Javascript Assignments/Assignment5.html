@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+    <input type="int" id="temp1" placeholder="Enter temperature">
+    <button onclick="tempconvert()">Convert Temperature</button>
+    <p id="FTemp"></p>
+
+    <script>
+        function tempconvert()
+        {
+            let temp1=parseFloat(document.getElementById('temp1').value);
+            
+            FTemp=(temp1*9/5)+32;
+            document.getElementById('FTemp').innerHTML="The fahrenheit temperature is "+FTemp
+        }
+    </script>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</body>
+</html>
